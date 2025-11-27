@@ -51,7 +51,7 @@ if st.button("Generate Text"):
             st.info(f"Detected Sentiment: **{label}** ({score:.2f} confidence)")
             
             # Step 3: Construct the Prompt
-            # We add a tonal cue to guide the AI based on the detected sentiment
+            # Adds a tonal cue to guide the AI based on the detected sentiment
             if label == "POSITIVE":
                 tone_instruction = f"Write a happy and optimistic story about: {user_input}"
             else:
@@ -68,7 +68,7 @@ if st.button("Generate Text"):
             result_text = generated[0]['generated_text']
             
             # (Optional) Clean the output to remove the instruction line if needed
-            # For this MVP, we display the raw generation to show the AI's work
+            # For this MVP, the raw generation is displayed to show the AI's work
             
             st.subheader("Generated Output:")
             st.write(result_text)
